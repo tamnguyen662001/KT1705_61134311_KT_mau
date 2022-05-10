@@ -1,0 +1,59 @@
+﻿@model KT1705_61134311.Models.Sinhvien
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    string gtinh = "";
+}
+
+<table border="1" cellpadding="0" cellspacing="0" style="font-size:14px;margin-left:50px;">
+    <tr>
+        <td>
+            <table cellpadding="2" cellspacing="10">
+                <caption><b>THÔNG TIN CHI TIẾT</b></caption>
+                <tr>
+                    <td rowspan="8"><img src="/Images/@Html.DisplayFor(model => model.AnhNV)" width="100" height="100" /></td>
+                    <td>Mã sinh viên:</td>
+                    <td>@Html.DisplayFor(model => model.MaSV)</td>
+                </tr>
+                <tr>
+                    <td>Họ sinh viên:</td>
+                    <td>@Html.DisplayFor(model => model.HoSV)</td>
+                </tr>
+                <tr>
+                    <td>Tên sinh viên:</td>
+                    <td>@Html.DisplayFor(model => model.TenSV)</td>
+                </tr>
+                <tr>
+                    <td>Giới tính:</td>
+                    <td>
+                        @{if (Model.GioiTinh == true)
+                            { gtinh = "Nam"; }
+                            else
+                            { gtinh = "Nữ"; }
+                        }
+                        @gtinh
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ngày sinh:</td>
+                    <td>@Html.DisplayFor(model => model.NgaySinh)</td>
+                </tr>
+               
+                <tr>
+                    <td>Địa chỉ:</td>
+                    <td>@Html.DisplayFor(model => model.DiaChi)</td>
+                </tr>
+                <tr>
+                    <td>Lớp:</td>
+                    <td>@Html.DisplayFor(model => model.Lop.TenLop)</td>
+                </tr>
+
+            </table>
+        </td>
+    </tr>
+</table>
+<p style="margin-left:50px;">
+    @Html.ActionLink("Cập nhật", "Edit", new { id = Model.MaSV }) |
+    @Html.ActionLink("Quay lại", "Index")
+</p>
