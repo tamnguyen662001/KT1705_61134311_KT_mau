@@ -2,22 +2,22 @@
     Layout = null;
 }
 @{
-    try
-    {
-        string hoTen = Session["HoTen"].ToString();
-        if (hoTen != null)
-        {
-            ViewBag.NguoiDung = "Thông tin người dùng: " + hoTen;
-        }
-        else
-        {
-            ViewBag.NguoiDung = "Thông tin người dùng: Chưa đăng nhập ";
-        }
-    }
-    catch
-    {
+//try
+//{
+//    string hoTen = Session["HoTen"].ToString();
+//    if (hoTen != null)
+//    {
+//        ViewBag.NguoiDung = "Thông tin người dùng: " + hoTen;
+//    }
+//    else
+//    {
+//        ViewBag.NguoiDung = "Thông tin người dùng: Chưa đăng nhập ";
+//    }
+//}
+//catch
+//{
 
-    }
+//}
 }
 <!DOCTYPE html>
 <html>
@@ -33,7 +33,7 @@
         <div id="banner" style="top:0px;position:absolute;">HỆ THỐNG QUẢN LÝ THÔNG TIN NHÂN VIÊN</div>
         <div id="menu" style="margin-top:10px;">
             <div>
-                @Html.ActionLink("GIỚI THIỆU", "../SinhvienKT1705_61134311/GioiThieu_61134311", new { @class = "a" }) &nbsp;|&nbsp;
+                @Html.ActionLink("GIỚI THIỆU", "../Giothieu/Index", new { @class = "a" }) &nbsp;|&nbsp;
                 @Html.ActionLink("THÊM MỚI", "../SinhvienKT1705_61134311/Create", new { @class = "a" })&nbsp;|&nbsp;
                 @Html.ActionLink("NHÂN VIÊN", "../SinhvienKT1705_61134311/Index", new { @class = "a" }) &nbsp;|&nbsp;
                 @Html.ActionLink("TÌM KIẾM", "../SinhvienKT1705_61134311/TimKiemNC_61134311", new { @class = "a" })

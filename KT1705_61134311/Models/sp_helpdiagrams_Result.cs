@@ -10,19 +10,13 @@
 namespace KT1705_61134311.Models
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class Sinhvien
+    public partial class sp_helpdiagrams_Result
     {
-        public string MaSV { get; set; }
-        public string HoSV { get; set; }
-        public string TenSV { get; set; }
-        public Nullable<System.DateTime> NgaySinh { get; set; }
-        public Nullable<bool> GioiTinh { get; set; }
-        public string AnhNV { get; set; }
-        public string DiaChi { get; set; }
-        public string MaLop { get; set; }
-    
-        public virtual Lop Lop { get; set; }
+        public string Database { get; set; }
+        public string Name { get; set; }
+        public int ID { get; set; }
+        public string Owner { get; set; }
+        public int OwnerID { get; set; }
     }
 }

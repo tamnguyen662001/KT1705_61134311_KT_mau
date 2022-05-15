@@ -67,9 +67,9 @@ namespace KT1705_61134311.Controllers
             return "SV" + SV.Substring(maSV.ToString().Length - 1);
         }
 
-        public ActionResult TimKiem()
+        public ActionResult TimKiem(string maSV)
         {
-            var sinhviens = db.Sinhviens.Include(n => n.Lop);
+            var sinhviens = db.Sinhviens.Where(abc => abc.MaSV == maSV);
             return View(sinhviens.ToList());
         }
         [HttpPost]
@@ -83,15 +83,14 @@ namespace KT1705_61134311.Controllers
         }
         [HttpGet]
 
-        public ActionResult TimKiemNC_61134311(string maSV = "", string hoTen = "", string gioiTinh = "", string diaChi = "", string maLop = "")
+        public ActionResult TimKiemNC_61134311(string maSV = "", string hoTen = "")
         {
             
-            ViewBag.diaChi = diaChi;
-            ViewBag.MaLop = new SelectList(db.Sinhviens, "MaLop", "TenLop");
-            var nhanViens = db.Sinhviens.SqlQuery("NhanVien_TimKiem'" + maSV + "','" + hoTen + "','" + gioiTinh + "','" + "',N'" + diaChi + "','" + maLop + "'");
-            if (nhanViens.Count() == 0)
+         
+            var sinhviens = db.Sinhviens.SqlQuery("Sinhvien_Timkiem'" + maSV + "','" + hoTen + "'");
+            if (sinhviens.Count() == 0)
                 ViewBag.TB = "Không có thông tin tìm kiếm.";
-            return View(nhanViens.ToList());
+            return View(sinhviens.ToList());
         }
         public ActionResult Create()
         {
