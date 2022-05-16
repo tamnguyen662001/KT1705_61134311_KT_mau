@@ -66,9 +66,9 @@ grid.Column("GioiTinh","Giới tính",format: (@item) => @item.GioiTinh==true?"N
 
 grid.Column("DiaChi","Địa chỉ"),
 grid.Column("Lop.TenLop","Lớp"),
-grid.Column(format: (item) => Html.ActionLink("Cập nhật", "Edit", "SinhvienKT1705_61134311",new { id = item.MaSV },"SinhvienKT1705_61134311Controller")),
-grid.Column(format: (item) => Html.ActionLink("Xem chi tiết", "Details","SinhvienKT1705_61134311", new { id = item.MaSV },"SinhvienKT1705_61134311Controller")),
-grid.Column(format: (item) => Html.ActionLink("Xóa", "Delete","SinhvienKT1705_61134311", new { id = item.MaSV },"SinhvienKT1705_61134311Controller")),
+//grid.Column(format: (item) => Html.ActionLink("Cập nhật", "Edit", "SinhvienKT1705_61134311",new { id = item.MaSV },"SinhvienKT1705_61134311Controller")),
+//grid.Column(format: (item) => Html.ActionLink("Xem chi tiết", "Details","SinhvienKT1705_61134311", new { id = item.MaSV },"SinhvienKT1705_61134311Controller")),
+//grid.Column(format: (item) => Html.ActionLink("Xóa", "Delete","SinhvienKT1705_61134311", new { id = item.MaSV },"SinhvienKT1705_61134311Controller")),
 grid.Column("Chức năng", format: @<text>
             <a href="@Url.Action("Edit",
                         new { id = item.MaSV})" class="edit-btn"><abbr title="Cập nhật dữ liệu"><img src="/images/edit.png" width="20" height="20" /></abbr></a>

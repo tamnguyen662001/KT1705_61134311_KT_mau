@@ -23,6 +23,7 @@ namespace KT1705_61134311.Models
         [Display(Name = "Tên sinh viên")]
         public string TenSV { get; set; }
         [Display(Name = "Ngày sinh")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> NgaySinh { get; set; }
         [Display(Name = "Giới tính")]
         public Nullable<bool> GioiTinh { get; set; }
