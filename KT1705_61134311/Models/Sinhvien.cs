@@ -16,12 +16,15 @@ namespace KT1705_61134311.Models
     public partial class Sinhvien
     {
         [Display(Name = "Mã sinh viên")]
-
+        
         public string MaSV { get; set; }
         [Display(Name = "Họ sinh viên")]
+        [Required(ErrorMessage = "Nhập tên sinh viên")]
         public string HoSV { get; set; }
+        [Required(ErrorMessage = "Nhập họ sinh viên")]
         [Display(Name = "Tên sinh viên")]
         public string TenSV { get; set; }
+        [Required(ErrorMessage = "Nhập ngày sinh sinh viên")]
         [Display(Name = "Ngày sinh")]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> NgaySinh { get; set; }
@@ -30,6 +33,7 @@ namespace KT1705_61134311.Models
         [Display(Name = "Ảnh")]
         public string AnhNV { get; set; }
         [Display(Name = "Địa chỉ")]
+        [Required(ErrorMessage = "Nhập địa chỉ sinh viên")]
         public string DiaChi { get; set; }
         [Display(Name = "Mã lớp")]
         public string MaLop { get; set; }
