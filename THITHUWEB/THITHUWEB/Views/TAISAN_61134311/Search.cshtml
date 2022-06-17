@@ -43,6 +43,28 @@
         .tr, .td {
             text-align: left;
         }
+
+        .table1 input{
+            margin:5px 10px;
+        }
+        .table1 td{
+            font-size:14px;
+            font-weight:600;
+        }
+        #tb {
+            font-size: 14px;
+            font-weight: 600;
+            color: royalblue;
+            margin: 10px 363px;
+            
+        }
+        .tieude {
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: blue;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -51,18 +73,18 @@
         {
             @Html.AntiForgeryToken()
 
-
+            <h3 class="tieude">Tìm kiếm tài sản</h3>
             <table class="table1" align="center">
-                
+
                 <tr>
                     <td>Tên tài sản</td>
                     <td>
-                        <input type="text" name="TenTS" value="@ViewBag.TenTS" />
+                        <input type="text" name="TenTS" value="@ViewBag.TenTS" class="my-2 mx-3" />
                     </td>
 
                 </tr>
 
-                
+
                 <tr>
                     <td>Giá từ</td>
                     <td>
@@ -72,15 +94,13 @@
 
                 </tr>
 
-                
-               
+
+
                 <tr>
                     <td></td>
                     <td>
-                        <input type="submit" name="submit" value="Tìm kiếm" style="margin-left: 5px;width:100px;
-                background-color: blue;color:white" />
-                        <input type="button" name="Nhapmoi" value="Nhập mới" style="margin-left: 5px;width:100px;
-                background-color: blue;color:white" onclick="location.href='@Url.Action("Search", "TAISAN_61134311/Search")'" />
+                        <input type="submit" name="submit" value="Tìm kiếm" class="btn btn-success" />
+                        <input type="button" name="Nhapmoi" value="Nhập mới" class="btn btn-info" onclick="location.href='@Url.Action("Search", "TAISAN_61134311/Search")'" />
 
                     </td>
                 </tr>
@@ -88,7 +108,7 @@
         }
     </div>
     <div id="gridContent">
-        @ViewBag.TB
+        <span id="tb"> @ViewBag.TB</span>
         @grid.GetHtml(
            tableStyle: "table table-bordered table-hover",
            footerStyle: "grid-footer",

@@ -1,15 +1,20 @@
 ﻿#banner {
     height: 60px;
     font-size: 22px;
-    color: blue;
+    color: darkblue;
     text-align: center;
-    background-color: aqua;
+    background-color: #31ffb5;
     width: 100%;
-    background-color: aqua; /*#222222;*/
+    background-color: #31ffb5; /*#222222;*/
     border-color: #080808;
     padding-top: 10px;
 }
-
+.tieude{
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    color:cyan;
+}
 #menu {
     float: left;
     width: 100%;
@@ -20,7 +25,7 @@
     height: 30px;
     padding-top: 5px;
     text-align: center;
-    background-color: aqua;
+    background-color: #31ffb5;
 }
 
 #content {

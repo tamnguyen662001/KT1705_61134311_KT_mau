@@ -60,14 +60,14 @@
 <!--========================-->
 <style>
     .content {
-        margin: 50px auto;
+        margin: 5px auto;
         width: 50%;
-        border: 3px solid;
+        border: 1px solid;
         justify-content: center;
         align-items: center;
         display: flex;
         font-size: 16px;
-        font-weight:600;
+        font-weight: 600;
     }
 
     .EmpImg img {
@@ -75,9 +75,26 @@
         height: 200px;
         border-radius: 50%;
     }
-</style>
 
+    .tieude {
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: blue;
+        text-align: center;
+    }
+
+    .tieude {
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: blue;
+        text-align: center;
+    }
+</style>
+<h3 class="tieude">Xoá tài sản</h3>
 <div class="content">
+
     <div class="EmpImg">
         <img src="/Images/@Html.DisplayFor(model => model.AnhMH)" alt="Alternate Text" />
     </div>
@@ -135,10 +152,10 @@
         {
             @Html.AntiForgeryToken()
 
-    <div class="form-actions no-color" style="margin-left:50px;">
-        <input type="submit" value="Xóa" class="btn btn-danger" /> |
-        <button class="btn btn-warning" onclick="location.href='@Url.Action("Index", "TAISAN_61134311")';return false;">Trở về</button>
-    </div>
+            <div class="form-actions no-color" style="margin-left:50px;">
+                <input type="submit" value="Xóa" class="btn btn-danger" /> |
+                <button class="btn btn-warning" onclick="location.href='@Url.Action("Index", "TAISAN_61134311")';return false;">Trở về</button>
+            </div>
         }
 
     </div>
