@@ -20,9 +20,9 @@ namespace THITHUWEB.Models
         {
             this.TAISANs = new HashSet<TAISAN>();
         }
-        [DisplayName("Mã loại tài sản")]
+        
         public string MaLTS { get; set; }
-        [DisplayName("Tên loại tài sản")]
+       
         public string TenLTS { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

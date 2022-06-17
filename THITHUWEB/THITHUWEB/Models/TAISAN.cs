@@ -12,24 +12,31 @@ namespace THITHUWEB.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
 
     public partial class TAISAN
     {
         [DisplayName("Mã tài sản")]
         public string MaTS { get; set; }
         [DisplayName("Tên tài sản")]
+        [Required(ErrorMessage = "Nhập ngày sinh sinh viên")]
         public string TenTS { get; set; }
         [DisplayName("Đơn vị tính")]
+        [Required(ErrorMessage = "Nhập đơn vị tính")]
         public string DVT { get; set; }
         [DisplayName("Xuất sứ")]
+        [Required(ErrorMessage = "Nhập ngày sinh sinh viên")]
         public Nullable<bool> XuatSu { get; set; }
         [DisplayName("Đơn giá")]
+        [Range(0, int.MaxValue, ErrorMessage = "Đơn giá phải lớn hơn {1}")]
+        [Required(ErrorMessage = "Nhập ngày sinh sinh viên")]
         public Nullable<int> DonGia { get; set; }
         [DisplayName("Ảnh minh hoạ")]
         public string AnhMH { get; set; }
-        [DisplayName("Mã loại tài sản")]
+       
         public string MaLTS { get; set; }
         [DisplayName("Ghi chú")]
+        [Required(ErrorMessage = "Nhập ngày sinh sinh viên")]
         public string GhiChu { get; set; }
     
         public virtual LOAITAISAN LOAITAISAN { get; set; }

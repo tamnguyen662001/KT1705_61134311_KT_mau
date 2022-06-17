@@ -123,7 +123,7 @@ namespace THITHUWEB.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.MaPB = new SelectList(db.LOAITAISANs, "MaLTS", "TenLTS", taisan.MaLTS);
+            ViewBag.MaLTS = new SelectList(db.LOAITAISANs, "MaLTS", "TenLTS", taisan.MaTS);
             return View(taisan);
         }
 
@@ -139,7 +139,7 @@ namespace THITHUWEB.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.MaPB = new SelectList(db.LOAITAISANs, "MaLTS", "TenLTS", taisan.MaLTS);
+            ViewBag.MaLTS = new SelectList(db.LOAITAISANs, "MaLTS", "TenLTS", taisan.MaTS);
             return View(taisan);
         }
 
@@ -167,7 +167,7 @@ namespace THITHUWEB.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.MaPB = new SelectList(db.LOAITAISANs, "MaLTS", "TenLTS", taisan.MaLTS);
+            ViewBag.MaLTS = new SelectList(db.LOAITAISANs, "MaLTS", "TenLTS", taisan.MaTS);
 
             return View(taisan);
         }
