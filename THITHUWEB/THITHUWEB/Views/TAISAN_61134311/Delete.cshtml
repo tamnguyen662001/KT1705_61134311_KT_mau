@@ -1,0 +1,65 @@
+﻿@model THITHUWEB.Models.TAISAN
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    string xs = "";
+}
+
+<h4 style="color:red;"> Bạn có chắc chắn xóa tài sản này?</h4>
+<table border="0" cellpadding="0" cellspacing="0" style="font-size:14px;margin-left:50px;">
+    <tr>
+        <td>
+            <table cellpadding="2" cellspacing="10">
+                <caption><b>THÔNG TIN CHI TIẾT</b></caption>
+                <tr>
+                    <td rowspan="8"><img src="/Images/@Html.DisplayFor(model => model.AnhMH)" width="100" height="100" /></td>
+                    <td>Mã tài sản:</td>
+                    <td>@Html.DisplayFor(model => model.MaTS)</td>
+                </tr>
+                <tr>
+                    <td>Tên tài sản:</td>
+                    <td>@Html.DisplayFor(model => model.TenTS)</td>
+                </tr>
+               
+                <tr>
+                    <td>Xuất sứ:</td>
+                    <td>
+                        @{if (Model.XuatSu == true)
+                            { xs = "Trong nước"; }
+                            else
+                            { xs = "Ngoại nhập"; }
+                        }
+                        @xs
+                    </td>
+                </tr>
+                <tr>
+                    <td>Đơn vị tính:</td>
+                    <td>@Html.DisplayFor(model => model.DVT)</td>
+                </tr>
+                <tr>
+                    <td>Đơn giá:</td>
+                    <td>@Html.DisplayFor(model => model.DonGia)</td>
+                </tr>
+
+                <tr>
+                    <td>Loại tài sản:</td>
+                    <td>@Html.DisplayFor(model => model.LOAITAISAN.TenLTS)</td>
+                </tr>
+                <tr>
+                    <td>Ghi chú:</td>
+                    <td>@Html.DisplayFor(model => model.GhiChu)</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color" style="margin-left:50px;">
+        <input type="submit" value="Xóa" class="btn btn-danger" /> |
+        @Html.ActionLink("Quay lại", "Index")
+    </div>
+}

@@ -1,0 +1,74 @@
+﻿@model THITHUWEB.Models.TAISAN
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TAISAN</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenTS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenTS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DVT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DVT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.XuatSu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.XuatSu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DonGia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DonGia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnhMH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnhMH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GhiChu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GhiChu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LOAITAISAN.TenLTS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LOAITAISAN.TenLTS)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaTS }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
